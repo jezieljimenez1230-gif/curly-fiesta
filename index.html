@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1366">
+    <title>welcome to my neocities!</title>
+    <style>
+        /* STYLING & THEME 
+        */
+        @font-face {
+            font-family: 'PixelFont';
+            src: url('https://fonts.cdnfonts.com/s/16219/Pixel-Art.woff'); /* High-quality pixel font fallback */
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: url('bg-clouds.png') repeat; /* RENAME YOUR BACKGROUND TO THIS */
+            font-family: 'PixelFont', 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            color: #ff85a2;
+        }
+
+        /* Main Window Container */
+        .window {
+            width: 1000px;
+            background: #fff0f5;
+            border: 8px solid #ffb7c5;
+            box-shadow: 8px 8px 0px rgba(255, 183, 197, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Bar */
+        .title-bar {
+            background: #ffb7c5;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .controls span {
+            border: 2px solid white;
+            padding: 0 8px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        /* Layout Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr 240px;
+            gap: 20px;
+            padding: 25px;
+        }
+
+        /* Reusable Box Style */
+        .box {
+            background: white;
+            border: 3px solid #ffb7c5;
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* Lace Trim Decoration */
+        .box::before {
+            content: "";
+            position: absolute;
+            top: -12px; left: 0; right: 0;
+            height: 15px;
+            background: url('lace-trim.png') repeat-x; /* RENAME LACE IMAGE TO THIS */
+        }
+
+        h2 {
+            font-size: 16px;
+            text-align: center;
+            margin: 0 0 10px 0;
+            text-transform: lowercase;
+        }
+
+        .divider {
+            border-bottom: 2px dashed #ffb7c5;
+            margin-bottom: 10px;
+        }
+
+        /* Specific Components */
+        .welcome-hero {
+            grid-column: span 3;
+            text-align: center;
+            position: relative;
+        }
+
+        .welcome-hero h1 {
+            font-size: 80px;
+            color: #ffb7c5;
+            margin: 10px 0;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 3px 3px white;
+        }
+
+        .moon {
+            position: absolute;
+            left: 20px; top: 0;
+            width: 80px;
+        }
+
+        /* Navigation Links */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border: 2px solid #ffb7c5;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ff85a2;
+        }
+
+        .nav-item:hover { background: #fff0f5; }
+
+        /* Images & Art */
+        .art-center { width: 100%; max-width: 280px; display: block; margin: 15px auto; }
+        .art-sidebar { width: 100%; border-radius: 8px; border: 2px solid #ffb7c5; }
+
+        /* Socials */
+        .social-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border: 2px solid #ffb7c5;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .copy-tag {
+            background: #ffb7c5;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        /* Footer Bar */
+        .footer-player {
+            background: #ffb7c5;
+            color: white;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .love-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .love-grid img {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #ffb7c5;
+            padding: 5px;
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="window">
+    <div class="title-bar">
+        <span>*+:･ﾟ✧ welcome to my neocities! ✧ﾟ･:+*</span>
+        <div class="controls"><span>_</span><span>□</span><span>X</span></div>
+    </div>
+
+    <div class="main-layout">
+        <div class="welcome-hero">
+            <img src="moon-icon.png" class="moon" alt="moon">
+            <h1>Welcome user</h1>
+            <p>~ to my little corner on the web ~</p>
+        </div>
+
+        <div class="sidebar">
+            <div class="box">
+                <h2>✧ navigation ✧</h2>
+                <div class="divider"></div>
+                <a href="#" class="nav-item">🎀 home</a>
+                <a href="#" class="nav-item">💗 about me</a>
+                <a href="#" class="nav-item">⭐ likes</a>
+                <a href="#" class="nav-item">✉️ guestbook</a>
+                <a href="#" class="nav-item">🎀 credits</a>
+            </div>
+
+            <div class="box">
+                <h2>✧ now playing ✧</h2>
+                <div class="divider"></div>
+                <img src="album-art.png" style="width:80px; display:block; margin:auto;">
+                <p style="text-align:center; font-size:12px;"><b>Moon Pride</b><br>Momoiro Clover Z</p>
+                <div style="text-align:center;">⏪ ⏸️ ⏩</div>
+                <img src="luna-pixel.png" style="width:60px; display:block; margin:10px auto;">
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="box">
+                <h2 style="font-size:20px;">✧･ﾟ: * hello there! *:･ﾟ✧</h2>
+                <div class="divider"></div>
+                <p style="text-align:center; font-size:14px; line-height:1.6;">
+                    welcome to my little space on the web! this is where i share things i love, random thoughts, and cute stuff that makes me happy (◕‿◕)♡
+                </p>
+                <img src="usagi-main.png" class="art-center" alt="Sailor Moon">
+                <p style="text-align:center;">🎀 ——— <b>you are loved!</b> ——— 🎀</p>
+                
+                <h2>💗 some things i love 💗</h2>
+                <div class="love-grid">
+                    <img src="icon-wand.png">
+                    <img src="icon-cat.png">
+                    <img src="icon-milk.png">
+                    <img src="icon-controller.png">
+                </div>
+                <p style="text-align:center; font-size:11px;">sailor moon . cats . pink . anime . desserts . music . cozy vibes</p>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="box">
+                <h2>✧ about me ✧</h2>
+                <div class="divider"></div>
+                <img src="usagi-profile.png" class="art-sidebar">
+                <p style="font-size:12px; text-align:center;">just a girl who loves pretty things, anime, and creating cute little websites!</p>
+            </div>
+
+            <div class="box">
+                <h2>✧ find me ✧</h2>
+                <div class="divider"></div>
+                <div class="social-btn">
+                    <span><b>tiktok</b><br>@orphsmaee</span>
+                    <span class="copy-tag">copy</span>
+                </div>
+                <div class="social-btn">
+                    <span><b>instagram</b><br>@Dolluxemaez</span>
+                    <span class="copy-tag">copy</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-player">
+        <span>▶ Sailor Moon OST - Moonlight Densetsu</span>
+        <span>▶ autoplay: on</span>
+    </div>
+</div>
+
+</body>
+</html>
